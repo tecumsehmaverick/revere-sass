@@ -1,0 +1,188 @@
+// HEADER
+body {
+	border-top:2px solid $greymid;
+	@include media($tablet) {
+		border-top:4px solid #535353;border-bottom:2px solid $bluemid;
+	}
+}
+
+body .container > header {
+	position:relative;
+	z-index:2;
+	background:$greydk;
+	border-bottom:1px solid $bluemid;
+	color:#fff;
+	overflow:hidden;
+	@include media($tablet) {
+		border-bottom:2px solid $bluemid;
+	}
+	a {
+		@include transition (all .5s ease);
+		&:hover {
+			color: $bluelt;
+			text-decoration:none;
+		}
+	}
+	a, span {
+		color:$greywt;
+		text-shadow:0 2px 1px #000;
+	} 
+	h1 {
+		@include maxWidth;
+		a {
+			text-indent:-9999em;
+			float:left;
+			margin:0;
+			width:110px;
+			height:0;
+			display:block;
+			padding-top:93px;
+			background-size:auto 100%;
+			background-repeat:no-repeat;
+			background-position:0 -11px;
+			float:left;
+			@include media($tablet) {
+				width:110px;height:0px;
+			}
+		}
+	}
+}
+body.marketing .container > header {
+	font-size:0.85em;
+	nav {
+		font: normal 1em/1.125em 'source_sans_problack';
+		span#special-menu {
+			position:absolute;
+			right:1em;
+			bottom:-2em;
+			cursor:pointer;
+		}
+		ul {
+			display:none;
+			position:relative;
+			right:0;
+			top:0;
+			left:0;
+			background:$greymid;
+			font-size:1.5em;
+			li {
+				a {
+					display:block;
+					padding:.25em 1em;
+					font-family:'source_sans_problack';
+				}
+				span {
+					display:inline-block;
+					padding:0.75em 0 .75em 1.825em;
+				} 
+				> span + a {
+					float:right;
+					padding-left:.25em;
+				}
+			}
+		}
+		@include media($tablet) {
+			float:right;
+			span#special-menu {
+				display:none;
+			}
+			ul {
+				display:block;
+				left:auto;
+				margin:0;
+				font-size:1.125em;
+				line-height:1.125em;
+				display:block;
+				top:0;
+				li {
+					position:relative;
+					width:auto;border-right:1px solid #535353;
+					float:left;
+					a {
+						padding:.75em 1.25em;
+					}
+					&:nth-last-of-type(-n+2) {
+						border:0;
+					}
+					&:last-of-type {
+						a, a:visited, a:hover {
+							margin:.5em;padding:.25em 1em;background:$bluemid;border-radius:.125em;text-shadow:0 1px 1px #3E7DB7;color:#fff;
+						}
+					}
+				}
+			}
+		}
+		@include media($desktop) {
+			ul {
+				li {
+					a, span {
+						font-size:1.125em;
+						padding:.75em 1.825em;
+					}
+					span {
+						padding:0.75em 0 .75em 1.825em;
+					}
+					&:last-of-type a {
+						margin: .5em;
+						color:white;
+					}
+				}
+			}
+		}
+
+	}
+}
+body.admin .container > header {
+	color:$greylt;
+	text-align:left;
+	overflow:auto;
+	position:relative;
+	border-bottom:1px solid $greylt;
+	@include media($tablet) {
+		border-bottom:2px solid $greylt;
+	}
+	h1 {
+		
+	}
+	a {
+		color:$greylt;
+		text-decoration:none;
+		&:hover {
+			color:$bluemid;
+		}
+	}
+	h2#page-name {
+		color:white;
+		font-size:1.2em;
+		margin-top:0.5em;
+	}
+	aside {
+		font-size:.85em;
+		form {
+			clear:both;
+			text-align:center;
+			select {
+				margin-top:0.7em;width:95%;background:#fff;
+			}
+		}
+		a {margin-right:1em;}
+	}
+	@include media($tablet) {
+		h1 {margin-left:0.75em;}
+		h2#page-name {
+			position:absolute;
+			bottom:0.4em;
+			left:175px;
+			font-size:1.5em;
+		}
+		aside {
+			position:absolute;
+			top:0.75em;
+			right:0;
+			form {display:inline;}
+			#user-links {float:right;margin-right:0;}
+		}
+	}
+}
+.lt-ie9 body.marketing .container > header h1 a, 
+.lt-ie9 body.admin .container > header h1 a {background:url('/img/logo-direction.png')0 -11px no-repeat;}

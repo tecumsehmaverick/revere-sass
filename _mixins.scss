@@ -1,0 +1,41 @@
+ @import "bourbon/bourbon";
+ @import "neat/neat";
+
+// Breakpoints
+$tablet: new-breakpoint(min-width 640px);
+$notebook: new-breakpoint(min-width 1024px);
+$desktop: new-breakpoint(min-width 1100px);
+
+@mixin maxWidth {
+	max-width:1200px;
+	position:relative;
+	margin:0 auto;
+}
+@mixin width95 {
+	max-width:95%;
+	position:relative;
+	margin:0 auto;
+}
+/* Structure */
+$fg-column: 7.107%;
+$fg-gutter: 1.3377%;
+$fg-max-columns: 12;
+
+
+// Colors
+$greylogin:	#eee;
+$greydk:	#333333;
+$greywt:	#f9f9f9;
+$greylt: 	#ccc;
+$greymid:	#535353;
+
+$bluewt:	#e4eef6;
+$bluelt: 	#b3d2ed;
+$bluemid:	#5a96cc;
+$bluedk:	#3E7DB7;
+
+$actgreen:	#82b96a;
+$actgreendk:#649d2e;
+$actred:	#CC3535;
+$actreddk:	#B12C2C;
+
