@@ -54,7 +54,8 @@ footer #revmsg a {background:url('../img/revmsg.png') no-repeat;width:61px;heigh
 
 //Alert*/
 .alert {background:#8FCB51;color:#fff;
-	font-size:0.85em;padding:0.5em 0.75em 0.35em 0.75em;margin-bottom:1em;}
+	font-size:0.85em;padding:0.5em 0.75em 0.35em 0.75em;}
+.login .alert {margin-bottom:1em;}
 .alert.error {background:#d84b4b;}
 
 @media only screen and (min-width:480px) {
