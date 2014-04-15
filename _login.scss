@@ -57,9 +57,9 @@ footer #revmsg {text-align:center;margin:1em 0;}
 footer #revmsg a {background:url('../img/revmsg.png') no-repeat;width:61px;height:0;padding-top:75px;overflow:hidden;display:inline-block;}
 
 //Alert*/
-.alert {background:#8FCB51;color:#fff;
+.alert, .message {background:#8FCB51;color:#fff;
 	font-size:0.85em;padding:0.5em 0.75em 0.35em 0.75em;}
-.login .alert {margin-bottom:1em;}
+.login .alert, .login .message {margin-bottom:1em;}
 .alert.error {background:#d84b4b;}
 
 @media only screen and (min-width:480px) {
