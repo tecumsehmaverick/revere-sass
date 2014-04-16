@@ -135,7 +135,6 @@ body.marketing .container > header {
 body.admin .container > header {
 	color:$greylt;
 	text-align:left;
-	overflow:auto;
 	position:relative;
 	border-bottom:1px solid $greylt;
 	@include media($tablet) {
