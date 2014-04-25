@@ -52,20 +52,27 @@ body.marketing .container > header {
 	nav {
 		font: normal 1em/1.125em 'source_sans_problack';
 		span#special-menu {
+			text-transform:uppercase;
 			position:absolute;
-			right:1em;
-			bottom:-2em;
+			left:126px;
+			bottom:-1.625em;
 			cursor:pointer;
+			z-index:2;
 		}
 		ul {
-			display:none;
+			display:block;
 			position:relative;
 			right:0;
 			top:0;
 			left:0;
 			background:$greymid;
 			font-size:1.5em;
+			transition: all .75s ease-in-out;
 			li {
+				max-height:0;
+				overflow:hidden;
+				text-align:right;
+				transition: all .75s ease-in-out;
 				a {
 					display:block;
 					padding:.25em 1em;
@@ -79,6 +86,16 @@ body.marketing .container > header {
 					float:right;
 					padding-left:.25em;
 				}
+				&:last-of-type {
+					max-height:50px;
+					float:right;
+				}
+			}
+			&.visible {
+				li {
+					height:auto;
+					max-height:50px;
+				}
 			}
 		}
 		@include media($tablet) {
@@ -88,6 +105,7 @@ body.marketing .container > header {
 			}
 			ul {
 				display:block;
+				height:auto;
 				left:auto;
 				margin:0;
 				font-size:1.125em;
@@ -96,6 +114,7 @@ body.marketing .container > header {
 				top:0;
 				li {
 					position:relative;
+					max-height:50px;
 					width:auto;border-right:1px solid #535353;
 					float:left;
 					a {
@@ -105,6 +124,7 @@ body.marketing .container > header {
 						border:0;
 					}
 					&:last-of-type {
+						float:right;
 						a, a:visited, a:hover {
 							margin:.5em;padding:.25em 1em;background:$bluemid;border-radius:.125em;text-shadow:0 1px 1px #3E7DB7;color:#fff;
 						}
