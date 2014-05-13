@@ -2,7 +2,7 @@
 body {
 	border-top:2px solid $greymid;
 	@include media($tablet) {
-		border-top:4px solid #535353;border-bottom:2px solid $bluemid;
+		border-top:4px solid #535353;
 	}
 }
 
