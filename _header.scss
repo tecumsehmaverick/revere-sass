@@ -1,6 +1,8 @@
 // HEADER
 body {
 	border-top:2px solid $greymid;
+  margin:0;
+  padding:0;
 	@include media($tablet) {
 		border-top:4px solid #535353;
 	}
